@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Internet Prices (2022)",
+    "title": "Internet Prices in 2022 (Average price per GB, in USD)",
     "width": 800,
     "height": 400,
     "projection": {"type": "equalEarth"},
