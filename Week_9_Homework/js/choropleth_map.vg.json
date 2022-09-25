@@ -7,7 +7,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Week_9_Homework/js/ocean.json",
           "format": {"type": "topojson", "feature": "oceans"}
         },
         "mark": {"type": "geoshape", "fill": "skyblue"}
