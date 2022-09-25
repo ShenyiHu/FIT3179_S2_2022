@@ -1,10 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Internet Prices in 2022 (Average price per GB, in USD)",
+    "title": "Global Internet Prices in 2022 (Average price per GB, in USD)",
     "width": 800,
     "height": 400,
     "projection": {"type": "equalEarth"},
     "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+        },
+        "mark": {"type": "geoshape", "fill": "skyblue"}
+      },
       {
         "data": {
           "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Week_9_Homework/js/ne_110m.json",
@@ -46,6 +53,7 @@
               "color": {
                 "field": "Price",
                 "type": "quantitative",
+                "title": "Price per GB",
                 "scale": {
                   "type": "threshold",
                   "domain": [2, 5, 10],
