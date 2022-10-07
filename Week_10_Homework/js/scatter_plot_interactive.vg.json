@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 600,
-    "title": "Global Internet Users and Speed in 2022",
+    "title": "Global Internet Users and Speed (Mbps) in 2022",
     "data": {
       "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Week_10_Homework/data/users_speed.csv"
     },
@@ -51,7 +51,7 @@
       },
       {
         "calculate": "datum.Users/datum.Population * 10000",
-        "as": "Internet Users per 10,000 Population"
+        "as": "Users per 10,000 Population"
       }
     ],
     "encoding": {
@@ -106,12 +106,12 @@
             {"field": "Country", "type": "nominal"},
             {"field": "Users", "type": "quantitative", "format": ","},
             {"field": "Population", "type": "quantitative", "format": ","},
-            {"field": "Speed", "type": "quantitative", "format": ","},
             {
-              "field": "Internet Users per 10,000 Population",
+              "field": "Users per 10,000 Population",
               "type": "quantitative",
               "format": ".2f"
-            }
+            },
+            {"field": "Speed", "type": "quantitative", "format": ","}
           ]
         }
       },
@@ -138,12 +138,12 @@
             {"field": "Country", "type": "nominal"},
             {"field": "Users", "type": "quantitative", "format": ","},
             {"field": "Population", "type": "quantitative", "format": ","},
-            {"field": "Speed", "type": "quantitative", "format": ","},
             {
-              "field": "Internet Users per 10,000 Population",
+              "field": "Users per 10,000 Population",
               "type": "quantitative",
               "format": ".2f"
-            }
+            },
+            {"field": "Speed", "type": "quantitative", "format": ","}
           ]
         }
       }
