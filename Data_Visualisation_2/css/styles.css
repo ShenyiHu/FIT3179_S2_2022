@@ -32,9 +32,18 @@ p {
 	align-items: center;
 	border-style: outset;
 	flex-direction: column;
+	margin-bottom: 100px;
 }
 
 #choropleth_map {
+	margin: auto;
+	background-color: white;
+	width: 90%;
+	display: flex;
+	align-items: center;
+}
+
+#bubble_plot {
 	margin: auto;
 	background-color: white;
 	width: 90%;

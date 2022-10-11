@@ -15,19 +15,30 @@
 
 <body>
   <h1>Internet Around the World</h1>
+
   <div id="container">
     <h2>Price</h2>
     <div id="choropleth_map"></div>
-    <p>Description here blablahblah</p>
+  </div>
+
+  <div id="container">
+    <h2>Speed and Users</h2>
+    <div id="bubble_plot"></div>
   </div>
 
   <script type="text/javascript">
 
-    var spec2 = "js/choropleth_map.vg.json";
-    vegaEmbed('#choropleth_map', spec2).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    var spec1 = "js/choropleth_map.vg.json";
+    vegaEmbed('#choropleth_map', spec1).then(function (result) {
     }).catch(console.error);
   </script>
+
+<script type="text/javascript">
+
+  var spec2 = "js/bubble_plot_interactive.vg.json";
+  vegaEmbed('#bubble_plot', spec2).then(function(result) {
+  }).catch(console.error);
+</script>
 
 </body>
 
