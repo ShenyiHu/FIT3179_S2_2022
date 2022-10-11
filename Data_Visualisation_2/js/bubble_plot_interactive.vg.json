@@ -2,6 +2,13 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 600,
+    "config": {
+      "axis": {"labelFont": "Monaco", "titleFont": "Monaco"},
+      "legend": {"labelFont": "Monaco", "titleFont": "Monaco"},
+      "header": {"labelFont": "Monaco", "titleFont": "Monaco"},
+      "mark": {"font": "Monaco"},
+      "title": {"font": "Monaco", "subtitleFont": "Monaco"}
+    },
     "title": "Global Internet Users and Speed (Mbps) in 2022",
     "data": {
       "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Week_10_Homework/data/users_speed.csv"
@@ -122,7 +129,8 @@
           "baseline": "middle",
           "dx": -12,
           "fontSize": 11.5,
-          "fontStyle": "italic"
+          "fontStyle": "italic",
+          "font": "Monaco"
         },
         "encoding": {
           "text": {"field": "Country", "type": "nominal"},
