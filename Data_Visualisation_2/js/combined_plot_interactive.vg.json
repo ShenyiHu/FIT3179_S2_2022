@@ -60,29 +60,29 @@
       }
     }
   ],
+  "transform": [
+    {
+      "filter": "datum.Users > 0"
+    },
+    {
+      "filter": "datum.Speed > 0"
+    },
+    {
+      "filter": "datum.Population > Population_Above"
+    },
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    },
+    {
+      "calculate": "datum.Users/datum.Population * 10000",
+      "as": "Users per 10,000 Population"
+    }
+  ],
   "title": "Global Internet Users and Speed (Mbps) in 2022",
   "vconcat": [
     {
       "width": "container",
       "height": 500,
-      "transform": [
-        {
-          "filter": "datum.Users > 0"
-        },
-        {
-          "filter": "datum.Speed > 0"
-        },
-        {
-          "filter": "datum.Population > Population_Above"
-        },
-        {
-          "filter": "Continent_selection == null || datum.Continent == Continent_selection"
-        },
-        {
-          "calculate": "datum.Users/datum.Population * 10000",
-          "as": "Users per 10,000 Population"
-        }
-      ],
       "encoding": {
         "x": {
           "field": "Users",
@@ -106,7 +106,7 @@
       },
       "layer": [
         {
-          "mark": "circle",
+          "mark": "point",
           "encoding": {
             "size": {
               "field": "Population",
@@ -133,7 +133,7 @@
                 "format": ".1s"
               }
             },
-            "color": {
+            "shape": {
               "field": "Continent",
               "type": "nominal",
               "scale": {
@@ -145,11 +145,11 @@
                   "Oceania"
                 ],
                 "range": [
-                  "#e41a1c",
-                  "#984ea3",
-                  "#ff7f00",
-                  "#377eb8",
-                  "#a65628"
+                  "circle",
+                  "square",
+                  "triangle-down",
+                  "diamond",
+                  "triangle-up"
                 ]
               }
             },
@@ -246,7 +246,7 @@
       "encoding": {
         "x": {
           "field": "Year",
-          "timeUnit": "year"
+          "type": "nominal"
         },
         "y": {
           "field": "Price",

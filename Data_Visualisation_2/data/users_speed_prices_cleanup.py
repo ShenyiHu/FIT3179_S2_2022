@@ -29,9 +29,9 @@ for col in speed_file:
                 price_2020 = j[1]
                 price_2021 = j[2]
                 price_2022 = j[3]
-                csv.writer(output_file).writerow([continent, country, population, users, speed, price_2020, "Jan 1 2020"])
-                csv.writer(output_file).writerow([continent, country, population, users, speed, price_2021, "Jan 1 2021"])
-                csv.writer(output_file).writerow([continent, country, population, users, speed, price_2022, "Jan 1 2022"])
+                csv.writer(output_file).writerow([continent, country, population, users, speed, price_2020, "2020"])
+                csv.writer(output_file).writerow([continent, country, population, users, speed, price_2021, "2021"])
+                csv.writer(output_file).writerow([continent, country, population, users, speed, price_2022, "2022"])
                 break
 
 output_file.close()
