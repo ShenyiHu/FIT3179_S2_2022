@@ -246,7 +246,7 @@
       "encoding": {
         "x": {
           "field": "Year",
-          "type": "ordinal"
+          "timeUnit": "year"
         },
         "y": {
           "field": "Price",
