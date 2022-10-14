@@ -6,9 +6,11 @@ body {
 .row {
 	width: 100%;
 	display: flex;
+	column-gap: 50px;
 }
 
 .column {
+	width: 100%;
 	flex: 50%;
 }
 
@@ -26,13 +28,11 @@ h2 {
 }
 
 p {
-	padding-right: 80px;
 	font-family: Monaco, monospace;
 }
 
-#container {
+.container {
 	padding: 50px;
-	margin: auto;
 	border-radius: 25px;
 	background-color: white;
 	display: flex;
@@ -51,6 +51,30 @@ p {
 }
 
 #combined_plot {
+	margin: auto;
+	background-color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#bar_chart_1 {
+	margin: auto;
+	background-color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#bar_chart_2 {
+	margin: auto;
+	background-color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#bar_chart_3 {
 	margin: auto;
 	background-color: white;
 	width: 100%;

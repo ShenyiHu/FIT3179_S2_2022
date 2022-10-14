@@ -16,7 +16,7 @@
 <body>
   <h1>Internet Around the World</h1>
 
-  <div id="container">
+  <div class="container">
     <div class="row">
       <h2>Global Internet by Continent & Population</h2>
     </div>
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div id="container">
+  <div class="container">
     <div class="row">
       <h2>Internet Price on World Map</h2>
     </div>
@@ -43,6 +43,37 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <h2>Did you know?</h2>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <p>
+          <u>Sed do eiusmod tempor incididunt</u><br> eu lobortis elementum nibh tellus molestie nunc non. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Id semper risus in hendrerit gravida rutrum quisque. Aenean vel elit scelerisque mauris pellentesque. Cras adipiscing enim eu turpis egestas. Justo eget magna fermentum iaculis eu non diam. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Eu tincidunt tortor aliquam nulla facilisi. Ac turpis egestas sed tempus urna. Diam maecenas sed enim ut sem viverra.
+        </p>
+        <div id="bar_chart_1"></div>
+        <p> Justo eget magna fermentum iaculis eu non diam. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Eu tincidunt tortor aliquam nulla facilisi. Ac turpis egestas sed tempus urna. Diam maecenas sed enim ut sem viverra.</p>
+      </div>
+      <div class="column">
+        <p>
+          Lorem ipsum dolor sit amet<br>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus arcu bibendum at varius vel pharetra vel.<br><br><br><u>Eget duis at tellus at</u><br>Quisque non tellus orci ac auctor augue mauris augue. Arcu felis bibendum ut tristique et egestas quis. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Mollis aliquam ut porttitor leo a diam. Malesuada fames ac turpis egestas integer eget aliquet nibh praesent. Orci eu lobortis elementum nibh tellus molestie nunc non. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Id semper risus in hendrerit gravida rutrum quisque. Aenean vel elit scelerisque mauris pellentesque. Cras adipiscing enim eu turpis egestas.
+        </p>
+        <div id="bar_chart_2"></div>
+      </div>
+      <div class="column">
+        <p>
+          Lectus arcu bibendum at varius vel pharetra vel. Eget duis at tellus at. Quisque non tellus orci ac auctor augue mauris augue. Arcu felis bibendum ut tristique et egestas quis. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Mollis aliquam ut porttitor leo a diam.
+        </p>
+        <div id="bar_chart_3"></div>
+        <p>
+          Malesuada fames ac turpis egestas integer eget aliquet nibh praesent. Id semper risus in hendrerit gravida rutrum quisque. Aenean vel elit scelerisque mauris pellentesque. Cras adipiscing enim eu turpis egestas. Justo eget magna fermentum iaculis eu non diam. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Eu tincidunt tortor aliquam nulla facilisi. Ac turpis egestas sed tempus urna. Diam maecenas sed enim ut sem viverra.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <script type="text/javascript">
     var spec1 = "js/choropleth_map.vg.json";
     vegaEmbed('#choropleth_map', spec1).then(function (result) {
@@ -54,6 +85,24 @@
     vegaEmbed('#combined_plot', spec2).then(function (result) {
     }).catch(console.error);
   </script>
+
+  <script type="text/javascript">
+    var spec3 = "js/bar_chart_1.vg.json";
+    vegaEmbed('#bar_chart_1', spec3).then(function (result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var spec4 = "js/bar_chart_2.vg.json";
+    vegaEmbed('#bar_chart_2', spec4).then(function (result) {
+    }).catch(console.error);
+  </script>
+
+<script type="text/javascript">
+  var spec4 = "js/bar_chart_3.vg.json";
+  vegaEmbed('#bar_chart_3', spec4).then(function (result) {
+  }).catch(console.error);
+</script>
 
 </body>
 

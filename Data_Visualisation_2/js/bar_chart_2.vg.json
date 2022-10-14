@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/prices_all.csv"
+    },
+    "width": "container",
+    "config": {
+        "axis": {
+            "labelFont": "Monaco",
+            "titleFont": "Monaco"
+        },
+        "legend": {
+            "labelFont": "Monaco",
+            "titleFont": "Monaco",
+            "padding": 10
+        },
+        "header": {
+            "labelFont": "Monaco",
+            "titleFont": "Monaco"
+        },
+        "mark": {
+            "font": "Monaco"
+        },
+        "title": {
+            "font": "Monaco",
+            "subtitleFont": "Monaco"
+        }
+    },
+    "mark": {
+        "type": "bar"
+    },
+    "encoding": {
+        "x": {
+            "field": "Cheap",
+            "title": "Cheapest per GB",
+            "type": "quantitative"
+        },
+        "y": {
+            "field": "Country",
+            "type": "nominal",
+            "sort": {
+                "field": "Cheap",
+                "order": "descending"
+            }
+        }
+    },
+    "transform": [
+        {
+            "window": [
+                {
+                    "op": "rank",
+                    "as": "Rank"
+                }
+            ],
+            "sort": [
+                {
+                    "field": "Cheap",
+                    "order": "descending"
+                }
+            ]
+        },
+        {
+            "filter": "datum.Rank <= 10"
+        }
+    ]
+}
