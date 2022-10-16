@@ -50,7 +50,7 @@
         "y": {
             "field": "Country",
             "type": "nominal",
-            "sort": "-x"
+            "sort": "x"
         }
     },
     "transform": [
@@ -64,7 +64,7 @@
             "sort": [
                 {
                     "field": "Cheap",
-                    "order": "descending"
+                    "order": "ascending"
                 }
             ]
         },

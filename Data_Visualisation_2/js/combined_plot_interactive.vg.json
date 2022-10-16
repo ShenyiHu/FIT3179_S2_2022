@@ -3,9 +3,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/users_speed_prices.csv",
     "format": {
-        "parse": {
-            "Price": "number"
-        }
+      "parse": {
+        "Price": "number"
+      }
     }
   },
   "config": {
@@ -93,11 +93,13 @@
       "width": 780,
       "height": 500,
       "title": "Global Internet Users and Speed in 2022",
-      "params": [{
-        "name": "grid",
-        "select": "interval",
-        "bind": "scales"
-      }],
+      "params": [
+        {
+          "name": "grid",
+          "select": "interval",
+          "bind": "scales"
+        }
+      ],
       "encoding": {
         "x": {
           "field": "Users",
@@ -241,18 +243,6 @@
       },
       "transform": [
         {
-          "joinaggregate": [
-            {
-              "op": "sum",
-              "field": "Price",
-              "as": "Total"
-            }
-          ],
-          "groupby": [
-            "Country"
-          ]
-        },
-        {
           "window": [
             {
               "op": "rank",
@@ -261,9 +251,12 @@
           ],
           "sort": [
             {
-              "field": "Total",
+              "field": "Rank",
               "order": "descending"
             }
+          ],
+          "groupby": [
+            "Year"
           ]
         },
         {
