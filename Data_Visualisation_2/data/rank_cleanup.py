@@ -27,6 +27,6 @@ for tup in tup_list:
                 tup += (tup1[7],)
             else:
                 tup += ("N/A",)
-            csv.writer(output_file).writerow([tup[0], tup[1], tup[2], tup[3], tup[4], tup[5], tup[6], tup[7]])
+            csv.writer(output_file).writerow([tup[0], tup[1], tup[2], tup[3], tup[4], tup[5], tup[6], tup1[7]])
 
 output_file.close()
