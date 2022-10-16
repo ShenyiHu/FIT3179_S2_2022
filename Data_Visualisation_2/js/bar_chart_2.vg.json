@@ -36,16 +36,23 @@
             "subtitleFont": "Monaco",
             "fontSize": 14
         },
+        "text": {
+            "font": "Monaco",
+            "color": "white"
+        },
         "background": "antiquewhite"
-    },
-    "mark": {
-        "type": "bar"
     },
     "encoding": {
         "x": {
             "field": "Expensive",
             "title": "Price per Gigabyte",
-            "type": "quantitative"
+            "type": "quantitative",
+            "scale": {
+                "domain": [
+                    0,
+                    220
+                ]
+            }
         },
         "y": {
             "field": "Country",
@@ -70,6 +77,43 @@
         },
         {
             "filter": "datum.Rank <= 10"
+        }
+    ],
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Expensive",
+                    "title": "Price per Gigabyte",
+                    "type": "quantitative",
+                    "scale": {
+                        "domain": [
+                            0,
+                            220
+                        ]
+                    }
+                },
+                "y": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "sort": null
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -10
+            },
+            "encoding": {
+                "text": {
+                    "field": "Expensive",
+                    "type": "quantitative"
+                }
+            }
         }
     ]
 }

@@ -36,16 +36,25 @@
             "subtitleFont": "Monaco",
             "fontSize": 14
         },
+        "text": {
+            "font": "Monaco",
+            "color": "white"
+        },
         "background": "antiquewhite"
-    },
-    "mark": {
-        "type": "bar"
     },
     "encoding": {
         "x": {
             "field": "Cheap",
             "title": "Price per Gigabyte",
-            "type": "quantitative"
+            "type": "quantitative",
+            "axis": {
+                "values": [
+                    0,
+                    0.01,
+                    0.02
+                ],
+                "format": ".2f"
+            }
         },
         "y": {
             "field": "Country",
@@ -70,6 +79,45 @@
         },
         {
             "filter": "datum.Rank <= 10"
+        }
+    ],
+    "layer": [
+        {
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Cheap",
+                    "title": "Price per Gigabyte",
+                    "type": "quantitative",
+                    "axis": {
+                        "values": [
+                            0,
+                            0.01,
+                            0.02
+                        ],
+                        "format": ".2f"
+                    }
+                },
+                "y": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "sort": null
+                }
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -10
+            },
+            "encoding": {
+                "text": {
+                    "field": "Cheap",
+                    "type": "quantitative"
+                }
+            }
         }
     ]
 }
