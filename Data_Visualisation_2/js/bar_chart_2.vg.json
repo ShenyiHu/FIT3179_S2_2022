@@ -1,9 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-        "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/prices_all.csv"
+        "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/prices_all.csv",
+        "format": {
+            "parse": {
+                "Expensive": "number"
+            }
+        }
     },
     "width": "container",
+    "title": "Countries with the Most Expensive Plan",
     "config": {
         "axis": {
             "labelFont": "Monaco",
@@ -28,8 +34,9 @@
         "title": {
             "font": "Monaco",
             "subtitleFont": "Monaco",
-            "fontSize": 16
-        }
+            "fontSize": 14
+        },
+        "background": "antiquewhite"
     },
     "mark": {
         "type": "bar"
@@ -37,7 +44,7 @@
     "encoding": {
         "x": {
             "field": "Expensive",
-            "title": "Price per gigabyte",
+            "title": "Price per Gigabyte",
             "type": "quantitative"
         },
         "y": {

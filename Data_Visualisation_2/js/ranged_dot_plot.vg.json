@@ -4,6 +4,7 @@
     "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/continent.csv"
   },
   "width": "container",
+  "title": "Average Price Difference by Continent",
   "config": {
     "axis": {
       "labelFont": "Monaco",
@@ -28,8 +29,15 @@
     "title": {
       "font": "Monaco",
       "subtitleFont": "Monaco",
-      "fontSize": 16
-    }
+      "fontSize": 14
+    },
+    "text": {
+      "font": "Monaco"
+    },
+    "padding": {
+      "right": 0
+    },
+    "background": "antiquewhite"
   },
   "transform": [
     {
@@ -45,17 +53,18 @@
   "encoding": {
     "x": {
       "field": "Price",
-      "type": "quantitative"
+      "title": "Price per Gigabyte",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          10
+        ]
+      }
     },
     "y": {
       "field": "Continent",
-      "type": "nominal",
-      "axis": {
-        "offset": 5,
-        "ticks": false,
-        "minExtent": 70,
-        "domain": false
-      }
+      "type": "nominal"
     }
   },
   "layer": [
@@ -98,6 +107,44 @@
           "value": 1
         }
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "middle",
+        "align": "left",
+        "dx": 10
+      },
+      "encoding": {
+        "text": {
+          "field": "Price",
+          "type": "quantitative"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.Year == 2020"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "baseline": "middle",
+        "align": "right",
+        "dx": -10
+      },
+      "encoding": {
+        "text": {
+          "field": "Price",
+          "type": "quantitative"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.Year == 2022"
+        }
+      ]
     }
   ]
 }

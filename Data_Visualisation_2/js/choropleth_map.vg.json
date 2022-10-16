@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global Internet Prices in 2022 (Average price per GB, in USD)",
+  "title": "Global Internet Prices in 2022 (Average price per gigabyte, in United States Dollar)",
   "width": 820,
   "height": 400,
   "config": {
@@ -27,8 +27,9 @@
     "title": {
       "font": "Monaco",
       "subtitleFont": "Monaco",
-      "fontSize": 16
-    }
+      "fontSize": 14
+    },
+    "background": "antiquewhite"
   },
   "projection": {
     "type": "equalEarth"
@@ -110,7 +111,7 @@
             "color": {
               "field": "Price",
               "type": "quantitative",
-              "title": "Price per gigabyte",
+              "title": "Price per Gigabyte",
               "scale": {
                 "type": "threshold",
                 "domain": [

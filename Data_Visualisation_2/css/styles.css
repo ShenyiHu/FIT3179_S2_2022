@@ -1,6 +1,6 @@
-body {
-	background-color: antiquewhite;
-	width: 1920px;
+body, html {
+	background-color: #477bc7;
+	max-width: 100%;
 }
 
 .row {
@@ -14,11 +14,20 @@ body {
 	flex: 50%;
 }
 
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
 h1 {
 	margin: auto;
-	padding-top: 70px;
 	font-family: Monaco, monospace;
-	text-align: center;
+	font-size: 86px;
+	color: antiquewhite;
+	text-align: left;
+	padding-left: 120px;
 }
 
 h2 {
@@ -31,14 +40,29 @@ p {
 	font-family: Monaco, monospace;
 }
 
+u {
+	font-weight: bold;
+}
+
 em {
 	font-size: small;
+}
+
+img {
+	width: 50%;
+	align-items: center;
+}
+
+.top_container {
+	width: 100%;
+	display: flex;
+	margin-top: 70px;
 }
 
 .container {
 	padding: 50px;
 	border-radius: 25px;
-	background-color: white;
+	background-color: antiquewhite;
 	display: flex;
 	align-items: center;
 	border-style: outset;
@@ -48,7 +72,6 @@ em {
 
 #choropleth_map {
 	margin: auto;
-	background-color: white;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -56,15 +79,13 @@ em {
 
 #combined_plot {
 	margin: auto;
-	background-color: white;
 	width: 100%;
-	display: flex;
-	align-items: center;
+	display: block;
+	align-items: left;
 }
 
 #ranged_dot_plot {
 	margin: auto;
-	background-color: white;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -72,7 +93,6 @@ em {
 
 #bar_chart_1 {
 	margin: auto;
-	background-color: white;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -80,7 +100,6 @@ em {
 
 #bar_chart_2 {
 	margin: auto;
-	background-color: white;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -88,6 +107,13 @@ em {
 
 /* Vega-Lite */
 .vega-bindings {
+	font-size: small;
+	font-family: Monaco, monospace;
+	padding-top: 20px;
+	padding-left: 8px;
+}
+
+select {
 	font-size: small;
 	font-family: Monaco, monospace;
 }

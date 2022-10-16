@@ -1,7 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/users_speed_prices.csv"
+    "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/users_speed_prices.csv",
+    "format": {
+        "parse": {
+            "Price": "number"
+        }
+    }
   },
   "config": {
     "axis": {
@@ -28,11 +33,12 @@
     "title": {
       "font": "Monaco",
       "subtitleFont": "Monaco",
-      "fontSize": 16
+      "fontSize": 14
     },
     "concat": {
       "spacing": 170
-    }
+    },
+    "background": "antiquewhite"
   },
   "params": [
     {
@@ -86,7 +92,7 @@
     {
       "width": 780,
       "height": 500,
-      "title": "Global Internet Users and Speed (Mbps) in 2022*",
+      "title": "Global Internet Users and Speed in 2022",
       "params": [{
         "name": "grid",
         "select": "interval",
@@ -110,6 +116,7 @@
         },
         "y": {
           "field": "Speed",
+          "title": "Speed (Megabits per second)",
           "type": "quantitative"
         },
         "size": {
