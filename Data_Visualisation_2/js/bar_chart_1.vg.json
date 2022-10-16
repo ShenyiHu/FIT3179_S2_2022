@@ -1,18 +1,22 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-        "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/speed.csv"
+        "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/prices_all.csv"
     },
     "width": "container",
     "config": {
         "axis": {
             "labelFont": "Monaco",
-            "titleFont": "Monaco"
+            "titleFont": "Monaco",
+            "labelFontSize": 12,
+            "titleFontSize": 14
         },
         "legend": {
             "labelFont": "Monaco",
             "titleFont": "Monaco",
-            "padding": 10
+            "padding": 10,
+            "labelFontSize": 12,
+            "titleFontSize": 14
         },
         "header": {
             "labelFont": "Monaco",
@@ -23,7 +27,8 @@
         },
         "title": {
             "font": "Monaco",
-            "subtitleFont": "Monaco"
+            "subtitleFont": "Monaco",
+            "fontSize": 16
         }
     },
     "mark": {
@@ -31,16 +36,14 @@
     },
     "encoding": {
         "x": {
-            "field": "Speed",
+            "field": "Cheap",
+            "title": "Price per gigabyte",
             "type": "quantitative"
         },
         "y": {
             "field": "Country",
             "type": "nominal",
-            "sort": {
-                "field": "Speed",
-                "order": "descending"
-            }
+            "sort": "-x"
         }
     },
     "transform": [
@@ -53,7 +56,7 @@
             ],
             "sort": [
                 {
-                    "field": "Speed",
+                    "field": "Cheap",
                     "order": "descending"
                 }
             ]

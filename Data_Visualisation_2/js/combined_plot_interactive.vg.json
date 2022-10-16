@@ -6,12 +6,17 @@
   "config": {
     "axis": {
       "labelFont": "Monaco",
-      "titleFont": "Monaco"
+      "titleFont": "Monaco",
+      "labelFontSize": 12,
+      "titleFontSize": 14,
+      "labelAngle": 0
     },
     "legend": {
       "labelFont": "Monaco",
       "titleFont": "Monaco",
-      "padding": 10
+      "padding": 10,
+      "labelFontSize": 12,
+      "titleFontSize": 14
     },
     "header": {
       "labelFont": "Monaco",
@@ -22,10 +27,11 @@
     },
     "title": {
       "font": "Monaco",
-      "subtitleFont": "Monaco"
+      "subtitleFont": "Monaco",
+      "fontSize": 16
     },
     "concat": {
-      "spacing": 50
+      "spacing": 170
     }
   },
   "params": [
@@ -78,9 +84,14 @@
   ],
   "hconcat": [
     {
-      "width": 830,
+      "width": 780,
       "height": 500,
-      "title": "Global Internet Users and Speed (Mbps) in 2022",
+      "title": "Global Internet Users and Speed (Mbps) in 2022*",
+      "params": [{
+        "name": "grid",
+        "select": "interval",
+        "bind": "scales"
+      }],
       "encoding": {
         "x": {
           "field": "Users",
@@ -123,7 +134,10 @@
             ]
           },
           "legend": {
-            "format": ".1s"
+            "format": ".1s",
+            "orient": "none",
+            "legendX": 800,
+            "legendY": 120
           }
         },
         "shape": {
@@ -144,6 +158,10 @@
               "diamond",
               "triangle-up"
             ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 800
           }
         },
         "opacity": {
@@ -180,26 +198,7 @@
       "mark": "point"
     },
     {
-      "transform": [
-        {
-          "window": [
-            {
-              "op": "rank",
-              "as": "Rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "Users",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.Rank <= 20"
-        }
-      ],
-      "width": 500,
+      "width": 420,
       "height": 500,
       "title": "Global Internet Prices from 2020 to 2022",
       "mark": "line",
@@ -232,7 +231,43 @@
             "format": ","
           }
         ]
-      }
+      },
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Price",
+              "as": "Total"
+            }
+          ],
+          "groupby": [
+            "Country"
+          ]
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "Rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "Total",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.Rank <= 10"
+        }
+      ]
     }
-  ]
+  ],
+  "resolve": {
+    "legend": {
+      "color": "independent"
+    }
+  }
 }

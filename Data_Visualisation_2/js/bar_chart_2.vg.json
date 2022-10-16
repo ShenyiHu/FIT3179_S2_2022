@@ -7,12 +7,16 @@
     "config": {
         "axis": {
             "labelFont": "Monaco",
-            "titleFont": "Monaco"
+            "titleFont": "Monaco",
+            "labelFontSize": 12,
+            "titleFontSize": 14
         },
         "legend": {
             "labelFont": "Monaco",
             "titleFont": "Monaco",
-            "padding": 10
+            "padding": 10,
+            "labelFontSize": 12,
+            "titleFontSize": 14
         },
         "header": {
             "labelFont": "Monaco",
@@ -23,7 +27,8 @@
         },
         "title": {
             "font": "Monaco",
-            "subtitleFont": "Monaco"
+            "subtitleFont": "Monaco",
+            "fontSize": 16
         }
     },
     "mark": {
@@ -31,17 +36,14 @@
     },
     "encoding": {
         "x": {
-            "field": "Cheap",
-            "title": "Cheapest per GB",
+            "field": "Expensive",
+            "title": "Price per gigabyte",
             "type": "quantitative"
         },
         "y": {
             "field": "Country",
             "type": "nominal",
-            "sort": {
-                "field": "Cheap",
-                "order": "descending"
-            }
+            "sort": "-x"
         }
     },
     "transform": [
@@ -54,7 +56,7 @@
             ],
             "sort": [
                 {
-                    "field": "Cheap",
+                    "field": "Expensive",
                     "order": "descending"
                 }
             ]

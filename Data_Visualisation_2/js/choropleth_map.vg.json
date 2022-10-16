@@ -4,13 +4,30 @@
   "width": 820,
   "height": 400,
   "config": {
-    "title": {
-      "font": "Monaco",
-      "subtitleFont": "Monaco"
+    "axis": {
+      "labelFont": "Monaco",
+      "titleFont": "Monaco",
+      "labelFontSize": 12,
+      "titleFontSize": 14
     },
     "legend": {
       "labelFont": "Monaco",
+      "titleFont": "Monaco",
+      "padding": 10,
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "header": {
+      "labelFont": "Monaco",
       "titleFont": "Monaco"
+    },
+    "mark": {
+      "font": "Monaco"
+    },
+    "title": {
+      "font": "Monaco",
+      "subtitleFont": "Monaco",
+      "fontSize": 16
     }
   },
   "projection": {
@@ -93,11 +110,11 @@
             "color": {
               "field": "Price",
               "type": "quantitative",
-              "title": "Price per GB",
+              "title": "Price per gigabyte",
               "scale": {
                 "type": "threshold",
                 "domain": [
-                  2,
+                  1,
                   5,
                   10
                 ],

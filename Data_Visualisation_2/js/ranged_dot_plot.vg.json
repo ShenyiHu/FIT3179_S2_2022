@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/continent.csv"
+  },
+  "width": "container",
+  "config": {
+    "axis": {
+      "labelFont": "Monaco",
+      "titleFont": "Monaco",
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "legend": {
+      "labelFont": "Monaco",
+      "titleFont": "Monaco",
+      "padding": 10,
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "header": {
+      "labelFont": "Monaco",
+      "titleFont": "Monaco"
+    },
+    "mark": {
+      "font": "Monaco"
+    },
+    "title": {
+      "font": "Monaco",
+      "subtitleFont": "Monaco",
+      "fontSize": 16
+    }
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "Year",
+        "oneOf": [
+          2020,
+          2022
+        ]
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Price",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Continent",
+      "type": "nominal",
+      "axis": {
+        "offset": 5,
+        "ticks": false,
+        "minExtent": 70,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {
+          "field": "Continent",
+          "type": "nominal"
+        },
+        "color": {
+          "value": "#db646f"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "color": {
+          "field": "Year",
+          "type": "ordinal",
+          "scale": {
+            "domain": [
+              2020,
+              2022
+            ],
+            "range": [
+              "#e6959c",
+              "#911a24"
+            ]
+          }
+        },
+        "size": {
+          "value": 100
+        },
+        "opacity": {
+          "value": 1
+        }
+      }
+    }
+  ]
+}
