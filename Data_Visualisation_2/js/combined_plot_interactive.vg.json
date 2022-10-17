@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/ShenyiHu/FIT3179_S2_2022/main/Data_Visualisation_2/data/users_speed_prices.csv",
     "format": {
       "parse": {
-        "Price": "number"
+        "Speed": "number"
       }
     }
   },
@@ -251,7 +251,7 @@
           ],
           "sort": [
             {
-              "field": "Rank",
+              "field": "Speed",
               "order": "descending"
             }
           ],
