@@ -44,10 +44,6 @@ u {
 	font-weight: bold;
 }
 
-em {
-	font-size: small;
-}
-
 img {
 	width: 50%;
 	align-items: center;
@@ -71,35 +67,32 @@ img {
 }
 
 #choropleth_map {
-	margin: auto;
+	margin-top: 15px;
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
 
 #combined_plot {
-	margin: auto;
+	margin-top: 30px;
 	width: 100%;
 	display: block;
-	align-items: left;
+	align-items: center;
 }
 
 #ranged_dot_plot {
-	margin: auto;
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
 
 #bar_chart_1 {
-	margin: auto;
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
 
 #bar_chart_2 {
-	margin: auto;
 	width: 100%;
 	display: flex;
 	align-items: center;

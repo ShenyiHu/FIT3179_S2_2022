@@ -90,7 +90,7 @@
   ],
   "hconcat": [
     {
-      "width": 780,
+      "width": 700,
       "height": 500,
       "title": "Global Internet Users and Speed in 2022",
       "params": [
@@ -145,7 +145,7 @@
           "legend": {
             "format": ".1s",
             "orient": "none",
-            "legendX": 800,
+            "legendX": 720,
             "legendY": 120
           }
         },
@@ -170,7 +170,7 @@
           },
           "legend": {
             "orient": "none",
-            "legendX": 800
+            "legendX": 720
           }
         },
         "opacity": {
@@ -207,7 +207,7 @@
       "mark": "point"
     },
     {
-      "width": 420,
+      "width": 450,
       "height": 500,
       "title": "Global Internet Prices from 2020 to 2022",
       "mark": "line",
@@ -222,7 +222,8 @@
         },
         "color": {
           "field": "Country",
-          "type": "nominal"
+          "type": "nominal",
+          "scale": {"scheme": "dark2"}
         },
         "tooltip": [
           {
@@ -260,7 +261,7 @@
           ]
         },
         {
-          "filter": "datum.Rank <= 10"
+          "filter": "datum.Rank <= 8"
         }
       ]
     }
