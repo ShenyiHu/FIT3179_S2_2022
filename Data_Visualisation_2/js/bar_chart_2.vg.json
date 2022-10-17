@@ -15,18 +15,7 @@
             "labelFont": "Monaco",
             "titleFont": "Monaco",
             "labelFontSize": 12,
-            "titleFontSize": 14
-        },
-        "legend": {
-            "labelFont": "Monaco",
-            "titleFont": "Monaco",
-            "padding": 10,
-            "labelFontSize": 12,
-            "titleFontSize": 14
-        },
-        "header": {
-            "labelFont": "Monaco",
-            "titleFont": "Monaco"
+            "titleFontSize": 12
         },
         "mark": {
             "font": "Monaco"
@@ -45,7 +34,7 @@
     "encoding": {
         "x": {
             "field": "Expensive",
-            "title": "Price per Gigabyte",
+            "title": "Price (United States Dollar per Gigabyte)",
             "type": "quantitative",
             "scale": {
                 "domain": [
@@ -85,7 +74,7 @@
             "encoding": {
                 "x": {
                     "field": "Expensive",
-                    "title": "Price per Gigabyte",
+                    "title": "Price (United States Dollar per Gigabyte)",
                     "type": "quantitative",
                     "scale": {
                         "domain": [

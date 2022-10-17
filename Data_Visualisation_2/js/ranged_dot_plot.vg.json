@@ -10,14 +10,14 @@
       "labelFont": "Monaco",
       "titleFont": "Monaco",
       "labelFontSize": 12,
-      "titleFontSize": 14
+      "titleFontSize": 12
     },
     "legend": {
       "labelFont": "Monaco",
       "titleFont": "Monaco",
       "padding": 10,
       "labelFontSize": 12,
-      "titleFontSize": 14
+      "titleFontSize": 12
     },
     "header": {
       "labelFont": "Monaco",
@@ -53,7 +53,7 @@
   "encoding": {
     "x": {
       "field": "Price",
-      "title": "Price per Gigabyte",
+      "title": "Price (United States Dollar per Gigabyte)",
       "type": "quantitative",
       "scale": {
         "domain": [
