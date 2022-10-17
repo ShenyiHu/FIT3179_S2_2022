@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global Internet Prices in 2022 (Average price per gigabyte, in United States Dollar)",
+  "title": "Global Average Internet Prices in 2022",
   "width": 820,
   "height": 400,
   "config": {
@@ -112,9 +112,8 @@
               "field": "Price",
               "type": "quantitative",
               "title": [
-                "Price (United",
-                "States Dollar",
-                "per Gigabyte)"
+                "Price (United States",
+                "Dollar per Gigabyte)"
               ],
               "scale": {
                 "type": "threshold",

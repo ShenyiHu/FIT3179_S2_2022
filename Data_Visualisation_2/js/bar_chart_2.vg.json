@@ -29,7 +29,8 @@
             "font": "Monaco",
             "color": "white"
         },
-        "background": "antiquewhite"
+        "background": "antiquewhite",
+        "padding": 10
     },
     "encoding": {
         "x": {
