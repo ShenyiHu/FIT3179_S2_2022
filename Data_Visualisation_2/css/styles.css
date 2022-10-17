@@ -40,6 +40,14 @@ p {
 	font-family: Monaco, monospace;
 }
 
+hr {
+	border: 1px solid black;
+}
+
+a {
+	font-family: Monaco, monospace;
+}
+
 img {
 	width: 50%;
 	align-items: center;
