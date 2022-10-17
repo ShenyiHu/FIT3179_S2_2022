@@ -23,10 +23,7 @@ csv.writer(output_file).writerow(['Continent', 'Country', 'Population', 'Users',
 for tup in tup_list:
     for tup1 in tup_list2:
         if tup[1] == tup1[1]:
-            if tup[6] == "2022":
-                tup += (tup1[7],)
-            else:
-                tup += ("",)
+            tup += (tup1[7],)
             csv.writer(output_file).writerow([tup[0], tup[1], tup[2], tup[3], tup[4], tup[5], tup[6], tup[7]])
 
 output_file.close()
