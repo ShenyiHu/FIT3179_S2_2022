@@ -12,7 +12,7 @@ for tup in tup_list:
     if tup[6] == "2022":
         tup_list1.append(tup)
 
-tup_list1.sort(key=lambda tup: tup[5], reverse=True)
+tup_list1.sort(key=lambda tup: tup[3])
 i = 1
 tup_list2 = []
 for tup in tup_list1:
